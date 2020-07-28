@@ -6,72 +6,84 @@ import learn.cycle.componentspecification.WheelSpecification;
 public class WheelCostCalculation implements Wheel{
 
 	private int wheelCost=0;
+	private int spokesCost=0;
+	private int tubeCost=0;
+	private int tyreCost=0;
+	private int rimCost=0;
 	@Override
 	public void getSpokesCost(WheelSpecification ws) {
 		// TODO Auto-generated method stub
-		if(ws.getSpokes().equals("SingleRider"))
+		if(ws.getSpokes()==1)
 		{
-			wheelCost=+400;
+			this.spokesCost=+400;
 		}
-		else if(ws.getSpokes().equals("DoubleRider"))
+		else if(ws.getSpokes()==2)
 		{
-			wheelCost=+600;
+			this.spokesCost=+600;
 		}
 		else 
 		{
-			wheelCost=+500;
+			this.spokesCost=+500;
 		}
+		
 	}
 
 	@Override
 	public void getTubeCost(WheelSpecification ws) {
 		// TODO Auto-generated method stub
-		if(ws.getTube().equals("WithTube"))
+		if(ws.getTube()==1)
 		{
-			wheelCost=+200;
+			tubeCost=+200;
 		}
-		else if(ws.getTube().equals("TubeLess"))
+		else if(ws.getTube()==2)
 		{
-			wheelCost=+400;
+			tubeCost=+400;
 		}
 		else 
 		{
-			wheelCost=+300;
+			tubeCost=+300;
 		}
+		
 	}
 
 	@Override
 	public void getRimCost(WheelSpecification ws) {
 		// TODO Auto-generated method stub
-		if(ws.getRim().equals("TubeLess") && ws.getTube().equals("TubeLess"))
+		if(ws.getRim()==1 && ws.getTube()==1)
 		{
-			wheelCost=+600;
+			rimCost=+600;
 		}
-		else if(ws.getRim().equals("WithTube") && ws.getTube().equals("WithTube"))
+		else if(ws.getRim()==2 && ws.getTube()==2)
 		{
-			wheelCost=+500;
+			rimCost=+500;
 		}
 		else 
 		{
-			wheelCost=+400;
+			rimCost=+400;
 		}
+		
 	}
 
 	@Override
 	public void getTyreCost(WheelSpecification ws) {
 		// TODO Auto-generated method stub
-		if(ws.getRim().equals("Branded"))
+		if(ws.getRim()==1)
 		{
-			wheelCost=+600;
+			tyreCost=+600;
 		}
-		else if(ws.getTyre().equals("NonBranded"))
+		else if(ws.getTyre()==2)
 		{
-			wheelCost=+200;
+			tyreCost=+200;
 		}
 		else 
 		{
-			wheelCost=+400;
+			tyreCost=+400;
 		}
+	}
+	public int getWheelTotalCost()
+	{
+		wheelCost=tyreCost+rimCost+tubeCost+spokesCost;
+		return wheelCost;
 	}
 
 }

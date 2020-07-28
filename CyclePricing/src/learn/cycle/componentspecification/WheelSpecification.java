@@ -2,33 +2,35 @@ package learn.cycle.componentspecification;
 
 public class WheelSpecification {
 
-	private String spokes;
-	private String rim;
-	private String tube;
-	private String tyre;
-	public String getSpokes() {
+	private int spokes;
+	private int rim;
+	private int tube;
+	private int tyre;
+	public int getSpokes() {
 		return spokes;
 	}
-	public void setSpokes(String spokes) {
+	public void setSpokes(int spokes) {
 		this.spokes = spokes;
 	}
-	public String getRim() {
+	public int getRim() {
 		return rim;
 	}
-	public void setRim(String rim) {
+	public void setRim(int rim) {
 		this.rim = rim;
 	}
-	public String getTube() {
+	public int getTube() {
 		return tube;
 	}
-	public void setTube(String tube) {
+	public void setTube(int tube) {
 		this.tube = tube;
 	}
-	public String getTyre() {
+	public int getTyre() {
 		return tyre;
 	}
-	public void setTyre(String tyre) {
+	public void setTyre(int tyre) {
 		this.tyre = tyre;
 	}
+	
+	
 	
 }
