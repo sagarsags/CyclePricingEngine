@@ -3,7 +3,7 @@ package learn.cycle.costcalculation;
 import learn.cycle.component.ChainAssembly;
 import learn.cycle.componentspecification.ChainAssemblySpecification;
 
-public class ChainAssemblyCalculation implements ChainAssembly
+public class ChainAssemblyCostCalculation implements ChainAssembly
 {
 	private int chainGearCost=0;
 	private int chainMaterialCost=0;

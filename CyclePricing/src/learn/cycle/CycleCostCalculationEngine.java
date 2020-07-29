@@ -5,11 +5,12 @@ import java.util.Scanner;
 import learn.cycle.componentspecification.ChainAssemblySpecification;
 import learn.cycle.componentspecification.FrameSpecification;
 import learn.cycle.componentspecification.HandleBarSpecification;
+import learn.cycle.componentspecification.SeatingSpecification;
 import learn.cycle.componentspecification.WheelSpecification;
-import learn.cycle.conversion.WheelConversion;
-import learn.cycle.costcalculation.ChainAssemblyCalculation;
+import learn.cycle.costcalculation.ChainAssemblyCostCalculation;
 import learn.cycle.costcalculation.FrameCostCalculation;
 import learn.cycle.costcalculation.HandleBarCostCalculation;
+import learn.cycle.costcalculation.SeatingCostCalculation;
 import learn.cycle.costcalculation.WheelCostCalculation;
 
 public class CycleCostCalculationEngine {
@@ -75,7 +76,7 @@ public class CycleCostCalculationEngine {
       ChainAssemblySpecification cs=new ChainAssemblySpecification();
       cs.setChainGear(chainGearOptionSelected);
       cs.setChainMaterial(chainMaterialOptionSelected);
-      ChainAssemblyCalculation cc=new ChainAssemblyCalculation();
+      ChainAssemblyCostCalculation cc=new ChainAssemblyCostCalculation();
       cc.getGearCost(cs);
       cc.getchainMaterialCost(cs);
       System.out.println("HandleBar Specification");
@@ -99,14 +100,30 @@ public class CycleCostCalculationEngine {
       hc.getHandleBarCoveringCost(hs);
       hc.getHandleBarMaterialCost(hs);
       hc.getHandleBarTypeCost(hs);
-      
+      System.out.println("Seating Specification");
+      System.out.println("Seating Capacity -> Select 1 or 2");
+      System.out.println("Option Available Are :");
+      System.out.println("1. Single Seating"+","+"2. Dual Seating");
+      int seatingCapacityOptionSelected=sc.nextInt();
+      System.out.println("Seating Cover -> Select 1 or 2");
+      System.out.println("Option Available Are :");
+      System.out.println("1.Branded"+","+"2.Non Branded");
+      int seatingCoverOptionSelected=sc.nextInt();
+      SeatingSpecification ss=new SeatingSpecification();
+      ss.setSeatCover(seatingCoverOptionSelected);
+      ss.setSeatingCapacity(seatingCapacityOptionSelected);
+      SeatingCostCalculation scc=new SeatingCostCalculation();
+      scc.getSeatingCapacityCost(ss);
+      scc.getSeatingCoverCost(ss);
       
       System.out.println("Total Cost For Wheel = "+wc.getWheelTotalCost());
       System.out.println("Total Cost For Frame = "+fc.getTotalFrameCost());
       System.out.println("Total Cost For Chain Assembly = "+cc.chainAsseblyCost());
       System.out.println("Total Cost For HandleBar  = "+hc.handleBarTotalCost());
-      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost()+cc.chainAsseblyCost()+hc.handleBarTotalCost();
-      System.out.println("Total Cycle Cost As of Now "+cycleCost );
+      System.out.println("Total Cost For Seating  = "+scc.seatingTotalCost());
+      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost()+cc.chainAsseblyCost()+hc.handleBarTotalCost()+scc.seatingTotalCost();
+      System.out.println("Total Cycle Cost  ="+cycleCost );
+      System.out.println("Thanks for Buying, Have safe a ride");
 	}
 
 	
