@@ -2,9 +2,11 @@ package learn.cycle;
 
 import java.util.Scanner;
 
+import learn.cycle.componentspecification.ChainAssemblySpecification;
 import learn.cycle.componentspecification.FrameSpecification;
 import learn.cycle.componentspecification.WheelSpecification;
 import learn.cycle.conversion.WheelConversion;
+import learn.cycle.costcalculation.ChainAssemblyCalculation;
 import learn.cycle.costcalculation.FrameCostCalculation;
 import learn.cycle.costcalculation.WheelCostCalculation;
 
@@ -44,7 +46,6 @@ public class CycleCostCalculationEngine {
       wc.getSpokesCost(ws);
       wc.getTubeCost(ws);
       wc.getTyreCost(ws);
-      System.out.println("Total Cost For Wheel= "+wc.getWheelTotalCost());
       System.out.println("Frame Specification");
       System.out.println("Frame Size -> Select 1, 2 or 3");
       System.out.println("Option Available Are :");
@@ -60,8 +61,25 @@ public class CycleCostCalculationEngine {
       FrameCostCalculation fc=new FrameCostCalculation();
       fc.getFrameSizeCost(fs);
       fc.getFrameMaterialCost(fs);
-      System.out.println("Total Cost Frame "+fc.getTotalFrameCost());
-      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost();
+      System.out.println("Chain Assembly  Specification");
+      System.out.println("Chain Material -> Select 1, 2 or 3");
+      System.out.println("Option Available Are :");
+      System.out.println("1. Steel"+","+"2. Aluminimum"+","+"3. Titanium");
+      int chainMaterialOptionSelected=sc.nextInt();
+      System.out.println("Gear -> Select  1 , 2 and 0 for no gear");
+      System.out.println("Option Available Are :");
+      System.out.println("1. 4 Gear"+","+"2. 5 Gear "+","+"0. No Gear");
+      int chainGearOptionSelected=sc.nextInt();
+      ChainAssemblySpecification cs=new ChainAssemblySpecification();
+      cs.setChainGear(chainGearOptionSelected);
+      cs.setChainMaterial(chainMaterialOptionSelected);
+      ChainAssemblyCalculation cc=new ChainAssemblyCalculation();
+      cc.getGearCost(cs);
+      cc.getchainMaterialCost(cs);
+      System.out.println("Total Cost For Wheel = "+wc.getWheelTotalCost());
+      System.out.println("Total Cost For Frame = "+fc.getTotalFrameCost());
+      System.out.println("Total Cost For Chain Assembly = "+cc.chainAsseblyCost());
+      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost()+cc.chainAsseblyCost();
       System.out.println("Total Cycle Cost As of Now "+cycleCost );
 	}
 
