@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 import learn.cycle.componentspecification.ChainAssemblySpecification;
 import learn.cycle.componentspecification.FrameSpecification;
+import learn.cycle.componentspecification.HandleBarSpecification;
 import learn.cycle.componentspecification.WheelSpecification;
 import learn.cycle.conversion.WheelConversion;
 import learn.cycle.costcalculation.ChainAssemblyCalculation;
 import learn.cycle.costcalculation.FrameCostCalculation;
+import learn.cycle.costcalculation.HandleBarCostCalculation;
 import learn.cycle.costcalculation.WheelCostCalculation;
 
 public class CycleCostCalculationEngine {
@@ -76,10 +78,34 @@ public class CycleCostCalculationEngine {
       ChainAssemblyCalculation cc=new ChainAssemblyCalculation();
       cc.getGearCost(cs);
       cc.getchainMaterialCost(cs);
+      System.out.println("HandleBar Specification");
+      System.out.println("Handle Bar Material -> Select 1, 2 or 3");
+      System.out.println("Option Available Are :");
+      System.out.println("1. Steel"+","+"2. Aluminimum"+","+"3. Titanium");
+      int handleBarMaterialOptionSelected=sc.nextInt();
+      System.out.println("Handle Bar Type -> Select 1, 2 or 3");
+      System.out.println("Option Available Are :");
+      System.out.println("1. Drop"+","+"2. Standard"+","+"3. Flat");
+      int handleBarTypeOptionSelected=sc.nextInt();
+      System.out.println("Handle Bar Cover -> Select 1, 2 or 3");
+      System.out.println("Option Available Are :");
+      System.out.println("1. Tape"+","+"2. Grips"+","+"3. Bar Ends");
+      int handleBarCoverOptionSelected=sc.nextInt();
+      HandleBarSpecification hs=new HandleBarSpecification();
+      hs.setHandleBarCovering(handleBarCoverOptionSelected);
+      hs.setHandleBarMaterial(handleBarMaterialOptionSelected);
+      hs.setHandleBarType(handleBarTypeOptionSelected);
+      HandleBarCostCalculation hc=new HandleBarCostCalculation();
+      hc.getHandleBarCoveringCost(hs);
+      hc.getHandleBarMaterialCost(hs);
+      hc.getHandleBarTypeCost(hs);
+      
+      
       System.out.println("Total Cost For Wheel = "+wc.getWheelTotalCost());
       System.out.println("Total Cost For Frame = "+fc.getTotalFrameCost());
       System.out.println("Total Cost For Chain Assembly = "+cc.chainAsseblyCost());
-      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost()+cc.chainAsseblyCost();
+      System.out.println("Total Cost For HandleBar  = "+hc.handleBarTotalCost());
+      int cycleCost= fc.getTotalFrameCost()+wc.getWheelTotalCost()+cc.chainAsseblyCost()+hc.handleBarTotalCost();
       System.out.println("Total Cycle Cost As of Now "+cycleCost );
 	}
 
