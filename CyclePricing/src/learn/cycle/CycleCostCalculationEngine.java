@@ -23,6 +23,8 @@ public class CycleCostCalculationEngine {
 		System.out.println(" 		*****Welcome Cycle Bazar*****");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Kindly Provide Following Specification to get you good cycle" + " and its cost");
+		System.out.println("Enter the year of buying the Cycle");
+		int year=sc.nextInt();
 		System.out.println(
 				" 1. Do you want to provide Specification through Json Format  or 2. Command Line Interaction Format ?");
 		System.out.println(" Choose option 1 for Json format and 2 for commond line format");
@@ -39,12 +41,12 @@ public class CycleCostCalculationEngine {
 				sameSpecification = sc.nextInt();
 			}
 			if (sameSpecification == 1) {
-				cycleCost = userFriendlyStatementDisplay(numberOfCycles);
+				cycleCost = userFriendlyStatementDisplay(numberOfCycles,year);
 				System.out
 						.println("Total Cost For " + numberOfCycles + " Cycle  is = RS. " + cycleCost * numberOfCycles);
 			} else {
 				for (int i = 1; i <= numberOfCycles; i++) {
-					int individualCost = userFriendlyStatementDisplay(numberOfCycles);
+					int individualCost = userFriendlyStatementDisplay(numberOfCycles,year);
 					cycleCost += individualCost;
 				}
 				System.out.println("Total Cycle Cost with = RS. " + cycleCost);
@@ -104,21 +106,24 @@ public class CycleCostCalculationEngine {
 					JSONObject seatingCapacity = seatingObj.getJSONObject("SeatingCapacity");
 					JSONObject seatingCover = seatingObj.getJSONObject("SeatingCover");
 					ss.setSeatingCapacity(twoOptionSelected(seatingCapacity, "SingleSeating", "DualSeating"));
-					ss.setSeatCover(twoOptionSelected(seatingCover, "Branded", "NonBranded"));
+					ss.setSeatCover(twoOptionSelected(seatingCover, "NonBranded", "Branded"));
 					TotalCostCalculation tcc = new TotalCostCalculation();
 					int singleCycleCost = 0;
 					if (cycleArray.length() == 1) {
 						System.out.println("Cycle Details --------------*********-----------");
 						System.out.println(
-								"Total Cycle Cost with Json Format = " + tcc.totalCostCalculation(ws, fs, hs, cs, ss));
+								"Total Cycle Cost with Json Format = RS. " + tcc.totalCostCalculation(ws, fs, hs, cs, ss,year));
 					} else {
 						System.out.println("Cycle Details --------------*********-----------");
-						singleCycleCost = tcc.totalCostCalculation(ws, fs, hs, cs, ss);
+						singleCycleCost = tcc.totalCostCalculation(ws, fs, hs, cs, ss,year);
 						System.out.println("Cost of individual cycle with Json Format = RS. " + singleCycleCost);
 						totalCycleCost += singleCycleCost;
 					}
 				}
-				System.out.println("Total Cycle Cost with Json Format = RS. " + totalCycleCost);
+				if(totalCycleCost >0)
+				{
+        				System.out.println("Total Cycle Cost with Json Format = RS. " + totalCycleCost);
+				}
 			}
 
 			catch (Exception e) {
@@ -131,7 +136,7 @@ public class CycleCostCalculationEngine {
 		System.out.println("Thanks for Buying " + " Happy Ridding !!!!!");
 	}
 
-	private static int userFriendlyStatementDisplay(int numberOfCycles) {
+	private static int userFriendlyStatementDisplay(int numberOfCycles,int year) {
 		Scanner sc = new Scanner(System.in);
 		// Specification class initialization
 		WheelSpecification ws = new WheelSpecification();
@@ -221,7 +226,7 @@ public class CycleCostCalculationEngine {
 		int singleCycleCost = 0;
 		TotalCostCalculation tcc = new TotalCostCalculation();
 		System.out.println("Cycle Details --------------*********-----------");
-		singleCycleCost = tcc.totalCostCalculation(ws, fs, hs, cs, ss);
+		singleCycleCost = tcc.totalCostCalculation(ws, fs, hs, cs, ss,year);
 		if (numberOfCycles >= 2) {
 			System.out.println("Single Cycle cost with given specification  = " + singleCycleCost);
 		}

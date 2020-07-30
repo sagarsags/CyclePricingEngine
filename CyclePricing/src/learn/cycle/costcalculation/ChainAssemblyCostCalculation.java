@@ -6,11 +6,11 @@ import learn.cycle.componentspecification.ChainAssemblySpecification;
 public class ChainAssemblyCostCalculation implements ChainAssembly {
 	private int chainGearCost = 0;
 	private int chainMaterialCost = 0;
-	private int chainAsseblyCost = 0;
 
 	@Override
-	public void getGearCost(ChainAssemblySpecification cs) {
+	public void getGearCost(ChainAssemblySpecification cs,int fareChange) {
 		// TODO Auto-generated method stub
+		chainGearCost=fareChange;
 		switch (cs.getChainGear()) {
 		case 1:
 			chainGearCost += 1000;
@@ -24,8 +24,9 @@ public class ChainAssemblyCostCalculation implements ChainAssembly {
 	}
 
 	@Override
-	public void getchainMaterialCost(ChainAssemblySpecification cs) {
+	public void getchainMaterialCost(ChainAssemblySpecification cs,int fareChange) {
 		// TODO Auto-generated method stub
+		chainMaterialCost=fareChange;
 		switch (cs.getChainMaterial()) {
 		case 1:
 			chainMaterialCost += 300;
@@ -42,7 +43,6 @@ public class ChainAssemblyCostCalculation implements ChainAssembly {
 	}
 
 	public int getChainAssemblyTotalCost() {
-		chainAsseblyCost = chainMaterialCost + chainGearCost;
-		return chainAsseblyCost;
+		return chainMaterialCost + chainGearCost;
 	}
 }

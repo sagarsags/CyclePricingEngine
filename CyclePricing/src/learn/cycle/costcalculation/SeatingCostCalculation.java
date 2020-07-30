@@ -3,44 +3,46 @@ package learn.cycle.costcalculation;
 import learn.cycle.component.Seating;
 import learn.cycle.componentspecification.SeatingSpecification;
 
-public class SeatingCostCalculation implements Seating {
+public class SeatingCostCalculation implements Seating{
 
-	private int seatingTotalCost = 0;
-	private int seatingCapacityCost = 0;
-	private int seatingCoverCost = 0;
-
+	private int seatingCapacityCost=0;
+	private int seatingCoverCost=0;
+	
 	@Override
-	public void getSeatingCapacityCost(SeatingSpecification ss) {
+	public void getSeatingCapacityCost(SeatingSpecification ss,int fareChange) {
 		// TODO Auto-generated method stub
+		seatingCapacityCost=fareChange;
 		switch (ss.getSeatingCapacity()) {
 		case 1:
-			seatingCapacityCost += 500;
+			seatingCapacityCost += 400;
 			break;
 		case 2:
-			seatingCapacityCost += 1000;
+			seatingCapacityCost += 700;
 			break;
 		default:
-			seatingCapacityCost += 500;
+			seatingCapacityCost += 400;
 		}
 	}
 
 	@Override
-	public void getSeatingCoverCost(SeatingSpecification ss) {
+	public void getSeatingCoverCost(SeatingSpecification ss,int fareChange) {
 		// TODO Auto-generated method stub
+		seatingCoverCost=fareChange;
 		switch (ss.getSeatCover()) {
 		case 1:
-			seatingCoverCost += 750;
+			seatingCoverCost += 400;
 			break;
 		case 2:
-			seatingCoverCost += 350;
+			seatingCoverCost += 250;
 			break;
 		default:
-			seatingCoverCost += 600;
+			seatingCoverCost += 300;
 		}
+		
 	}
-
-	public int getSeatingTotalCost() {
-		seatingTotalCost = seatingCapacityCost + seatingCoverCost;
-		return seatingTotalCost;
-	}
+    public int getseatingTotalCost()
+    {
+    	return seatingCapacityCost+seatingCoverCost;
+    }
+	
 }

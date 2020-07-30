@@ -8,11 +8,11 @@ public class HandleBarCostCalculation implements HandleBar {
 	private int handleBarTypeCost = 0;
 	private int handleBarCoverCost = 0;
 	private int handleBarMaterialCost = 0;
-	private int handleBarTotalCost = 0;
 
 	@Override
-	public void getHandleBarTypeCost(HandleBarSpecification hs) {
+	public void getHandleBarTypeCost(HandleBarSpecification hs,int fareChange) {
 		// TODO Auto-generated method stub
+		handleBarTypeCost=fareChange;
 		switch (hs.getHandleBarType()) {
 		case 1:
 			handleBarTypeCost += 200;
@@ -29,8 +29,9 @@ public class HandleBarCostCalculation implements HandleBar {
 	}
 
 	@Override
-	public void getHandleBarMaterialCost(HandleBarSpecification hs) {
+	public void getHandleBarMaterialCost(HandleBarSpecification hs,int fareChange) {
 		// TODO Auto-generated method stub
+		handleBarMaterialCost=fareChange;
 		switch (hs.getHandleBarMaterial()) {
 		case 1:
 			handleBarMaterialCost += 100;
@@ -47,8 +48,9 @@ public class HandleBarCostCalculation implements HandleBar {
 	}
 
 	@Override
-	public void getHandleBarCoveringCost(HandleBarSpecification hs) {
+	public void getHandleBarCoveringCost(HandleBarSpecification hs,int fareChange) {
 		// TODO Auto-generated method stub
+		handleBarCoverCost=fareChange;
 		switch (hs.getHandleBarMaterial()) {
 		case 1:
 			handleBarCoverCost += 30;
@@ -65,8 +67,7 @@ public class HandleBarCostCalculation implements HandleBar {
 	}
 
 	public int getHandleBarTotalCost() {
-		handleBarTotalCost = handleBarTypeCost + handleBarCoverCost + handleBarMaterialCost;
-		return handleBarTotalCost;
+		return handleBarTypeCost + handleBarCoverCost + handleBarMaterialCost;
 	}
 
 }

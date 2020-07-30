@@ -4,16 +4,15 @@ import learn.cycle.component.Wheel;
 import learn.cycle.componentspecification.WheelSpecification;
 
 public class WheelCostCalculation implements Wheel {
-
-	private int wheelCost = 0;
 	private int spokesCost = 0;
 	private int tubeCost = 0;
 	private int tyreCost = 0;
 	private int rimCost = 0;
-
+    
 	@Override
-	public void getSpokesCost(WheelSpecification ws) {
+	public void getSpokesCost(WheelSpecification ws,int fareChange) {
 		// TODO Auto-generated method stub
+		spokesCost=fareChange;
 		switch (ws.getSpokes()) {
 		case 1:
 			spokesCost += 600;
@@ -27,8 +26,9 @@ public class WheelCostCalculation implements Wheel {
 	}
 
 	@Override
-	public void getTubeCost(WheelSpecification ws) {
+	public void getTubeCost(WheelSpecification ws,int fareChange) {
 		// TODO Auto-generated method stub
+		tubeCost=fareChange;
 		switch (ws.getTube()) {
 		case 1:
 			tubeCost += 500;
@@ -42,8 +42,9 @@ public class WheelCostCalculation implements Wheel {
 	}
 
 	@Override
-	public void getRimCost(WheelSpecification ws) {
+	public void getRimCost(WheelSpecification ws,int fareChange) {
 		// TODO Auto-generated method stub
+		rimCost=fareChange;
 		switch (ws.getRim()) {
 		case 1:
 			rimCost += 600;
@@ -57,7 +58,8 @@ public class WheelCostCalculation implements Wheel {
 	}
 
 	@Override
-	public void getTyreCost(WheelSpecification ws) {
+	public void getTyreCost(WheelSpecification ws,int fareChange) {
+		tyreCost=fareChange;
 		// TODO Auto-generated method stub
 		switch (ws.getTyre()) {
 		case 1:
@@ -72,8 +74,8 @@ public class WheelCostCalculation implements Wheel {
 	}
 
 	public int getWheelTotalCost() {
-		wheelCost = tyreCost + rimCost + tubeCost + spokesCost;
-		return wheelCost;
+		return tyreCost + rimCost + tubeCost + spokesCost;
 	}
-
+    
+	
 }
