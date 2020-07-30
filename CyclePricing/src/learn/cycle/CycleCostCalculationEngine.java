@@ -14,10 +14,8 @@ import learn.cycle.costcalculation.SeatingCostCalculation;
 import learn.cycle.costcalculation.WheelCostCalculation;
 
 public class CycleCostCalculationEngine {
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	 
       System.out.println(" Welcome Cycle Bazar");
       System.out.println("Kindly Provide Following Specification to get you good cycle"
       		+ "and its cost");
@@ -125,11 +123,6 @@ public class CycleCostCalculationEngine {
       System.out.println("Total Cycle Cost  ="+cycleCost );
       System.out.println("Thanks for Buying, Have safe a ride");
 	}
-
-	
-
-	
-	
 	}
 
 

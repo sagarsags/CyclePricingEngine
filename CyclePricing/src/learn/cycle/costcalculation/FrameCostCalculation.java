@@ -11,43 +11,38 @@ public class FrameCostCalculation implements Frame {
 	@Override
 	public void getFrameMaterialCost(FrameSpecification fs) {
 		// TODO Auto-generated method stub
-		if(fs.getFrameMaterials()==1)
-		{
-			frameMaterialCost=+400;
-		}
-		else if(fs.getFrameMaterials()==2)
-		{
-			frameMaterialCost=+300;
-		}
-		else if(fs.getFrameMaterials()==3)
-		{
-			frameMaterialCost=+1000;
-		}
-		else 
-		{
-			frameMaterialCost=+600;
+		switch (fs.getFrameMaterials()) {
+		case 1:
+			frameMaterialCost += 800;
+			break;
+		case 2:
+			frameMaterialCost += 700;
+			break;
+		case 3:
+			frameMaterialCost += 1000;
+			break;
+		default:
+			frameMaterialCost += 700;
 		}
 	}
 
 	@Override
 	public void getFrameSizeCost(FrameSpecification fs) {
 		// TODO Auto-generated method stub
-		if(fs.getFrameSize()==1)
-		{
-			frameSizeCost=+100;
+		switch (fs.getFrameSize()) {
+		case 1:
+			frameSizeCost += 200;
+			break;
+		case 2:
+			frameSizeCost += 400;
+			break;
+		case 3:
+			frameSizeCost += 500;
+			break;
+		default:
+			frameSizeCost += 300;
 		}
-		else if(fs.getFrameSize()==2)
-		{
-			frameSizeCost=+200;
-		}
-		else if(fs.getFrameSize()==3)
-		{
-			frameSizeCost=+300;
-		}
-		else 
-		{
-			frameSizeCost=+200;
-		}
+		
 	}
     public int getTotalFrameCost()
     {

@@ -11,38 +11,30 @@ public class ChainAssemblyCostCalculation implements ChainAssembly
 	@Override
 	public void getGearCost(ChainAssemblySpecification cs) {
 		// TODO Auto-generated method stub
-		if(cs.getChainGear()==1)
-		{
-			chainGearCost=+600;
-		}
-		else if(cs.getChainGear()==2)
-		{
-			chainGearCost=+800;
-		}
-		else
-		{
-			chainGearCost=+400;
+		switch (cs.getChainGear()) {
+		case 1 : chainGearCost += 600;
+			     break;
+		case 2 : chainGearCost += 800;
+				 break;
+		default :chainGearCost+= 400;
 		}
 	}
 
 	@Override
 	public void getchainMaterialCost(ChainAssemblySpecification cs) {
 		// TODO Auto-generated method stub
-		if(cs.getChainMaterial()==1)
-		{
-			chainMaterialCost=+200;
-		}
-		else if(cs.getChainMaterial()==2)
-		{
-			chainMaterialCost=+300;
-		}
-		else if(cs.getChainMaterial()==3)
-		{
-			chainMaterialCost=+400;
-		}
-		else
-		{
-			chainMaterialCost=+200;
+		switch (cs.getChainMaterial()) {
+		case 1:
+			chainMaterialCost += 200;
+			break;
+		case 2:
+			chainMaterialCost += 300;
+			break;
+		case 3:
+			chainMaterialCost += 400;
+			break;
+		default:
+			chainMaterialCost += 200;
 		}
 	}
 

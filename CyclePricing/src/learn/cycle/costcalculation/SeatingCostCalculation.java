@@ -12,35 +12,32 @@ public class SeatingCostCalculation implements Seating{
 	@Override
 	public void getSeatingCapacityCost(SeatingSpecification ss) {
 		// TODO Auto-generated method stub
-		if(ss.getSeatingCapacity()==1)
-		{
-			seatingCapacityCost=+400;
-		}
-		else if(ss.getSeatingCapacity()==2)
-		{
-			seatingCapacityCost=+700;
-		}
-		else
-		{
-			seatingCapacityCost=+400;
+		switch (ss.getSeatingCapacity()) {
+		case 1:
+			seatingCapacityCost += 400;
+			break;
+		case 2:
+			seatingCapacityCost += 700;
+			break;
+		default:
+			seatingCapacityCost += 400;
 		}
 	}
 
 	@Override
 	public void getSeatingCoverCost(SeatingSpecification ss) {
 		// TODO Auto-generated method stub
-		if(ss.getSeatingCapacity()==1)
-		{
-			seatingCoverCost=+400;
+		switch (ss.getSeatCover()) {
+		case 1:
+			seatingCoverCost += 400;
+			break;
+		case 2:
+			seatingCoverCost += 250;
+			break;
+		default:
+			seatingCoverCost += 300;
 		}
-		else if(ss.getSeatingCapacity()==2)
-		{
-			seatingCoverCost=+250;
-		}
-		else
-		{
-			seatingCoverCost=+300;
-		}
+		
 	}
     public int seatingTotalCost()
     {

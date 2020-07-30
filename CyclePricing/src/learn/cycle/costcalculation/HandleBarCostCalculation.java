@@ -12,64 +12,57 @@ public class HandleBarCostCalculation implements HandleBar{
 	@Override
 	public void getHandleBarTypeCost(HandleBarSpecification hs) {
 		// TODO Auto-generated method stub
-		if(hs.getHandleBarType()==1)
-		{
-			handleBarTypeCost=+200;
-		}
-		else if(hs.getHandleBarType()==2)
-		{
-			handleBarTypeCost=+300;
-		}
-		else if(hs.getHandleBarType()==3)
-		{
-			handleBarTypeCost=+400;
-		}
-		else 
-		{
-			handleBarTypeCost=+100;
+		switch (hs.getHandleBarType()) {
+		case 1:
+			handleBarTypeCost += 200;
+			break;
+		case 2:
+			handleBarTypeCost += 400;
+			break;
+		case 3:
+			handleBarTypeCost += 500;
+			break;
+		default:
+			handleBarTypeCost += 200;
 		}
 	}
 
 	@Override
 	public void getHandleBarMaterialCost(HandleBarSpecification hs) {
 		// TODO Auto-generated method stub
-		if(hs.getHandleBarMaterial()==1)
-		{
-			handleBarMaterialCost=+70;
+		switch (hs.getHandleBarMaterial()) {
+		case 1:
+			handleBarMaterialCost += 100;
+			break;
+		case 2:
+			handleBarMaterialCost += 150;
+			break;
+		case 3:
+			handleBarMaterialCost += 200;
+			break;
+		default:
+			handleBarMaterialCost += 100;
 		}
-		else if(hs.getHandleBarMaterial()==2)
-		{
-			handleBarMaterialCost=+50;
-		}
-		else if(hs.getHandleBarMaterial()==3)
-		{
-			handleBarMaterialCost=+150;
-		}
-		else 
-		{
-			handleBarTypeCost=+100;
-		}
+		
 	}
 
 	@Override
 	public void getHandleBarCoveringCost(HandleBarSpecification hs) {
 		// TODO Auto-generated method stub
-		if(hs.getHandleBarMaterial()==1)
-		{
-			handleBarCoverCost=+30;
+		switch (hs.getHandleBarMaterial()) {
+		case 1:
+			handleBarCoverCost += 30;
+			break;
+		case 2:
+			handleBarCoverCost += 50;
+			break;
+		case 3:
+			handleBarCoverCost += 100;
+			break;
+		default:
+			handleBarCoverCost += 40;
 		}
-		else if(hs.getHandleBarMaterial()==2)
-		{
-			handleBarCoverCost=+50;
-		}
-		else if(hs.getHandleBarMaterial()==3)
-		{
-			handleBarCoverCost=+35;
-		}
-		else 
-		{
-			handleBarCoverCost=+40;
-		}
+		
 	}
 	public  int handleBarTotalCost()
 	{
