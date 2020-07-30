@@ -16,5 +16,4 @@ public class SeatingSpecification {
 	public void setSeatCover(int seatCover) {
 		this.seatCover = seatCover;
 	}
-	
 }

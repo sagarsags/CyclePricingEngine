@@ -3,12 +3,13 @@ package learn.cycle.costcalculation;
 import learn.cycle.component.HandleBar;
 import learn.cycle.componentspecification.HandleBarSpecification;
 
-public class HandleBarCostCalculation implements HandleBar{
+public class HandleBarCostCalculation implements HandleBar {
 
-	private int handleBarTypeCost=0;
-	private int handleBarCoverCost=0;
-	private int handleBarMaterialCost=0;
-	private int handleBarTotalCost=0;
+	private int handleBarTypeCost = 0;
+	private int handleBarCoverCost = 0;
+	private int handleBarMaterialCost = 0;
+	private int handleBarTotalCost = 0;
+
 	@Override
 	public void getHandleBarTypeCost(HandleBarSpecification hs) {
 		// TODO Auto-generated method stub
@@ -20,7 +21,7 @@ public class HandleBarCostCalculation implements HandleBar{
 			handleBarTypeCost += 400;
 			break;
 		case 3:
-			handleBarTypeCost += 500;
+			handleBarTypeCost += 700;
 			break;
 		default:
 			handleBarTypeCost += 200;
@@ -35,15 +36,14 @@ public class HandleBarCostCalculation implements HandleBar{
 			handleBarMaterialCost += 100;
 			break;
 		case 2:
-			handleBarMaterialCost += 150;
+			handleBarMaterialCost += 250;
 			break;
 		case 3:
-			handleBarMaterialCost += 200;
+			handleBarMaterialCost += 500;
 			break;
 		default:
 			handleBarMaterialCost += 100;
 		}
-		
 	}
 
 	@Override
@@ -54,21 +54,19 @@ public class HandleBarCostCalculation implements HandleBar{
 			handleBarCoverCost += 30;
 			break;
 		case 2:
-			handleBarCoverCost += 50;
+			handleBarCoverCost += 200;
 			break;
 		case 3:
-			handleBarCoverCost += 100;
+			handleBarCoverCost += 300;
 			break;
 		default:
 			handleBarCoverCost += 40;
 		}
-		
 	}
-	public  int handleBarTotalCost()
-	{
-		handleBarTotalCost=handleBarTypeCost+handleBarCoverCost+handleBarMaterialCost;
+
+	public int getHandleBarTotalCost() {
+		handleBarTotalCost = handleBarTypeCost + handleBarCoverCost + handleBarMaterialCost;
 		return handleBarTotalCost;
 	}
-	
 
 }

@@ -3,25 +3,26 @@ package learn.cycle.costcalculation;
 import learn.cycle.component.Wheel;
 import learn.cycle.componentspecification.WheelSpecification;
 
-public class WheelCostCalculation implements Wheel{
+public class WheelCostCalculation implements Wheel {
 
-	private int wheelCost=0;
-	private int spokesCost=0;
-	private int tubeCost=0;
-	private int tyreCost=0;
-	private int rimCost=0;
+	private int wheelCost = 0;
+	private int spokesCost = 0;
+	private int tubeCost = 0;
+	private int tyreCost = 0;
+	private int rimCost = 0;
+
 	@Override
 	public void getSpokesCost(WheelSpecification ws) {
 		// TODO Auto-generated method stub
 		switch (ws.getSpokes()) {
 		case 1:
-			spokesCost += 400;
-			break;
-		case 2:
 			spokesCost += 600;
 			break;
+		case 2:
+			spokesCost += 1200;
+			break;
 		default:
-			spokesCost += 500;
+			spokesCost += 600;
 		}
 	}
 
@@ -30,13 +31,13 @@ public class WheelCostCalculation implements Wheel{
 		// TODO Auto-generated method stub
 		switch (ws.getTube()) {
 		case 1:
-			tubeCost += 200;
+			tubeCost += 500;
 			break;
 		case 2:
-			tubeCost += 400;
+			tubeCost += 1000;
 			break;
 		default:
-			tubeCost += 300;
+			tubeCost += 400;
 		}
 	}
 
@@ -48,10 +49,10 @@ public class WheelCostCalculation implements Wheel{
 			rimCost += 600;
 			break;
 		case 2:
-			rimCost += 500;
+			rimCost += 1000;
 			break;
 		default:
-			rimCost += 400;
+			rimCost += 600;
 		}
 	}
 
@@ -60,18 +61,18 @@ public class WheelCostCalculation implements Wheel{
 		// TODO Auto-generated method stub
 		switch (ws.getTyre()) {
 		case 1:
-			tyreCost += 600;
+			tyreCost += 800;
 			break;
 		case 2:
-			tyreCost += 200;
+			tyreCost += 400;
 			break;
 		default:
 			tyreCost += 400;
 		}
 	}
-	public int getWheelTotalCost()
-	{
-		wheelCost=tyreCost+rimCost+tubeCost+spokesCost;
+
+	public int getWheelTotalCost() {
+		wheelCost = tyreCost + rimCost + tubeCost + spokesCost;
 		return wheelCost;
 	}
 

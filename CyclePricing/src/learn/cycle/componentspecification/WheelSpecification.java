@@ -30,7 +30,4 @@ public class WheelSpecification {
 	public void setTyre(int tyre) {
 		this.tyre = tyre;
 	}
-	
-	
-	
 }

@@ -24,5 +24,4 @@ public class HandleBarSpecification {
 	public void setHandleBarMaterial(int handleBarMaterial) {
 		this.handleBarMaterial = handleBarMaterial;
 	}
-	
 }

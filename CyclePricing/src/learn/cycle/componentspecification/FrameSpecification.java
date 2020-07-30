@@ -17,5 +17,4 @@ public class FrameSpecification {
 	public void setFrameMaterials(int frameMaterials) {
 		this.frameMaterials = frameMaterials;
 	}
-	
 }

@@ -16,6 +16,4 @@ public class ChainAssemblySpecification {
 	public void setChainGear(int chainGear) {
 		this.chainGear = chainGear;
 	}
-	
-	
 }

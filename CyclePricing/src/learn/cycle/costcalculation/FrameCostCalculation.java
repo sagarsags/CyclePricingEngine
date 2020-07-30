@@ -5,9 +5,10 @@ import learn.cycle.componentspecification.FrameSpecification;
 
 public class FrameCostCalculation implements Frame {
 
-	private int frameCost=0;
-	private int frameMaterialCost=0;
-	private int frameSizeCost=0;
+	private int frameCost = 0;
+	private int frameMaterialCost = 0;
+	private int frameSizeCost = 0;
+
 	@Override
 	public void getFrameMaterialCost(FrameSpecification fs) {
 		// TODO Auto-generated method stub
@@ -31,22 +32,21 @@ public class FrameCostCalculation implements Frame {
 		// TODO Auto-generated method stub
 		switch (fs.getFrameSize()) {
 		case 1:
-			frameSizeCost += 200;
+			frameSizeCost += 300;
 			break;
 		case 2:
-			frameSizeCost += 400;
+			frameSizeCost += 600;
 			break;
 		case 3:
-			frameSizeCost += 500;
+			frameSizeCost += 1000;
 			break;
 		default:
 			frameSizeCost += 300;
 		}
-		
 	}
-    public int getTotalFrameCost()
-    {
-    	frameCost=frameSizeCost+frameMaterialCost;
-    	return frameCost;
-    }
+
+	public int getTotalFrameCost() {
+		frameCost = frameSizeCost + frameMaterialCost;
+		return frameCost;
+	}
 }
