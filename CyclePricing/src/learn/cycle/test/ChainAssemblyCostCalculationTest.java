@@ -17,8 +17,12 @@ public class ChainAssemblyCostCalculationTest {
 		ChainAssemblyCostCalculation cc=new ChainAssemblyCostCalculation();
 		cc.getchainMaterialCost(cs, 80);
 		cc.getGearCost(cs, 80);
-		int ouput=cc.getChainAssemblyTotalCost();
-		assertEquals(1460, ouput);
+		assertEquals(1460, cc.getChainAssemblyTotalCost());
+		cs.setChainGear(2);
+		cs.setChainMaterial(2);
+		cc.getchainMaterialCost(cs, 60);
+		cc.getGearCost(cs, 60);
+		assertEquals(2220, cc.getChainAssemblyTotalCost());
 	}
 
 }

@@ -17,8 +17,12 @@ public class SeatingCostCalculationTest {
 	    SeatingCostCalculation sc=new SeatingCostCalculation();
 	    sc.getSeatingCapacityCost(ss, 80);
 	    sc.getSeatingCoverCost(ss, 80);
-	    int output=sc.getseatingTotalCost();
-	    assertEquals(960, output);
+	    assertEquals(960, sc.getseatingTotalCost());
+	    ss.setSeatCover(2);
+		ss.setSeatingCapacity(2);
+		sc.getSeatingCapacityCost(ss, 60);
+	    sc.getSeatingCoverCost(ss, 60);
+	    assertEquals(1070, sc.getseatingTotalCost());
 	}
 
 }

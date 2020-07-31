@@ -19,8 +19,14 @@ public class HandleBarCostCalculationTest {
 		hc.getHandleBarCoveringCost(hs, 80);
 		hc.getHandleBarMaterialCost(hs, 80);
 		hc.getHandleBarTypeCost(hs, 80);
-		int output=hc.getHandleBarTotalCost();
-		assertEquals(570, output);
+		assertEquals(570, hc.getHandleBarTotalCost());
+		hs.setHandleBarCovering(2);
+		hs.setHandleBarMaterial(2);
+		hs.setHandleBarType(2);
+		hc.getHandleBarCoveringCost(hs, 60);
+		hc.getHandleBarMaterialCost(hs, 60);
+		hc.getHandleBarTypeCost(hs, 60);
+		assertEquals(1030, hc.getHandleBarTotalCost());
 	}
 
 }

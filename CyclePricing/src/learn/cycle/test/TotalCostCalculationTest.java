@@ -19,6 +19,7 @@ public class TotalCostCalculationTest {
 
 	@Test
 	public void test() {
+		//first testcase
 		ChainAssemblySpecification cs=new ChainAssemblySpecification();
 		cs.setChainGear(1);
 		cs.setChainMaterial(1);
@@ -64,9 +65,45 @@ public class TotalCostCalculationTest {
 		wc.getTyreCost(ws, 80);
 		wc.getTubeCost(ws, 80);
 		int wheel=wc.getWheelTotalCost();
-		int output = wheel+frame+seating+handlebar+chain;
-		assertEquals(7070, output);
+		assertEquals(7070,wheel+frame+seating+handlebar+chain);
 		
+		//second testcase
+		cs.setChainGear(2);
+		cs.setChainMaterial(2);
+		cc.getchainMaterialCost(cs, 60);
+		cc.getGearCost(cs, 60);
+		chain=cc.getChainAssemblyTotalCost();
+		
+		hs.setHandleBarCovering(2);
+		hs.setHandleBarMaterial(2);
+		hs.setHandleBarType(2);
+		hc.getHandleBarCoveringCost(hs, 60);
+		hc.getHandleBarMaterialCost(hs, 60);
+		hc.getHandleBarTypeCost(hs, 60);
+		handlebar=hc.getHandleBarTotalCost();
+		
+		ss.setSeatCover(2);
+		ss.setSeatingCapacity(2);
+		sc.getSeatingCapacityCost(ss, 60);
+	    sc.getSeatingCoverCost(ss, 60);
+	    seating=sc.getseatingTotalCost();
+	   
+	    fs.setFrameMaterials(2);
+		fs.setFrameSize(2);
+		fc.getFrameSizeCost(fs, 60);
+		fc.getFrameMaterialCost(fs, 60);
+		frame=fc.getTotalFrameCost();
+		
+		ws.setRim(2);
+		ws.setSpokes(2);
+		ws.setTube(2);
+		ws.setTyre(2);
+		wc.getRimCost(ws, 60);
+		wc.getSpokesCost(ws, 60);
+		wc.getTyreCost(ws, 60);
+		wc.getTubeCost(ws, 60);
+		wheel=wc.getWheelTotalCost();
+		assertEquals(9580,wheel+frame+seating+handlebar+chain);
 	}
 
 }

@@ -21,8 +21,16 @@ public class WheelCostCalculationTest {
 		wc.getSpokesCost(ws, 80);
 		wc.getTyreCost(ws, 80);
 		wc.getTubeCost(ws, 80);
-		int output=wc.getWheelTotalCost();
-		assertEquals(2820, output);
+		assertEquals(2820, wc.getWheelTotalCost());
+		ws.setRim(2);
+		ws.setSpokes(2);
+		ws.setTube(2);
+		ws.setTyre(2);
+		wc.getRimCost(ws, 60);
+		wc.getSpokesCost(ws, 60);
+		wc.getTyreCost(ws, 60);
+		wc.getTubeCost(ws, 60);
+		assertEquals(3840, wc.getWheelTotalCost());
 	}
 
 }
