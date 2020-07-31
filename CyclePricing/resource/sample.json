@@ -1,0 +1,530 @@
+{
+	"JsonData": {
+		"Cycle": [{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "Yes",
+						"DoubleRider": "No"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "Yes",
+						"Medium": "No",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "Yes",
+						"Standard": "No",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					},
+					"HandleBarCover": {
+						"Tape": "No",
+						"Grips": "Yes",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "Yes",
+						"DoubleRider": "No"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "No",
+						"TubeLess": "Yes"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "Yes",
+						"Medium": "No",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "Yes",
+						"Standard": "No",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					},
+					"HandleBarCover": {
+						"Tape": "Yes",
+						"Grips": "No",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "Yes",
+						"DoubleRider": "No"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "Yes",
+						"Medium": "No",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "Yes",
+						"Standard": "No",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					},
+					"HandleBarCover": {
+						"Tape": "Yes",
+						"Grips": "No",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "No",
+						"DualSeating": "Yes"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "No",
+						"DoubleRider": "Yes"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "No",
+						"TubeLess": "Yes"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "Yes",
+						"Medium": "No",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "Yes",
+						"Standard": "No",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					},
+					"HandleBarCover": {
+						"Tape": "Yes",
+						"Grips": "No",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "Yes",
+						"DoubleRider": "No"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "No",
+						"NonBranded": "Yes"
+					},
+					"Rim": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "No",
+						"Medium": "No",
+						"Large": "Yes"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "No",
+						"5Gear": "No",
+						"NoGear": "Yes"
+					},
+					"ChainMaterial": {
+						"Steel": "No",
+						"Aluminimum": "Yes",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "Yes",
+						"Standard": "No",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "No",
+						"Aluminimum": "No",
+						"Titanium": "Yes"
+					},
+					"HandleBarCover": {
+						"Tape": "No",
+						"Grips": "No",
+						"BarEnds": "Yes"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "No",
+						"DoubleRider": "Yes"
+					},
+					"Tube": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "Yes",
+						"Medium": "No",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "No",
+						"Aluminimum": "Yes",
+						"Titanium": "No"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "No",
+						"Standard": "Yes",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					},
+					"HandleBarCover": {
+						"Tape": "Yes",
+						"Grips": "No",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "Yes",
+						"Branded": "No"
+					}
+				}
+			},
+			{
+				"Wheel": {
+					"Spokes": {
+						"SingleRider": "Yes",
+						"DoubleRider": "No"
+					},
+					"Tube": {
+						"WithTube": "No",
+						"TubeLess": "Yes"
+					},
+					"Tyre": {
+						"Branded": "Yes",
+						"NonBranded": "No"
+					},
+					"Rim": {
+						"WithTube": "Yes",
+						"TubeLess": "No"
+					}
+				},
+
+				"Frame": {
+					"FrameSize": {
+						"Small": "No",
+						"Medium": "Yes",
+						"Large": "No"
+					},
+					"FrameMaterial": {
+						"Steel": "Yes",
+						"Aluminimum": "No",
+						"Titanium": "No"
+					}
+
+				},
+
+				"ChainAssembly": {
+					"Gear": {
+						"4Gear": "Yes",
+						"5Gear": "No",
+						"NoGear": "No"
+					},
+					"ChainMaterial": {
+						"Steel": "No",
+						"Aluminimum": "No",
+						"Titanium": "Yes"
+					}
+
+				},
+				"HandleBar": {
+					"HandleBarType": {
+						"Drop": "No",
+						"Standard": "Yes",
+						"Flat": "No"
+					},
+					"HandleBarMaterial": {
+						"Steel": "No",
+						"Aluminimum": "No",
+						"Titanium": "Yes"
+					},
+					"HandleBarCover": {
+						"Tape": "Yes",
+						"Grips": "No",
+						"BarEnds": "No"
+					}
+				},
+				"Seating": {
+					"SeatingCapacity": {
+						"SingleSeating": "Yes",
+						"DualSeating": "No"
+					},
+					"SeatingCover": {
+						"NonBranded": "No",
+						"Branded": "Yes"
+					}
+				}
+			}
+		]
+	}
+}
